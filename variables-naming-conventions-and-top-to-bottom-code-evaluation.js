@@ -24,9 +24,17 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+let name = "Alice";
+let itemQuantity = 5;
+let totalPrice = 20;
+let paymentAmount = 25;
+let change = (paymentAmount - totalPrice);
+let averageItemPrice = (totalPrice / itemQuantity);
+let receiptWithChange =  name + " paid $" + paymentAmount + " for " + itemQuantity + " items that cost $" + totalPrice + ". She received $" + change + " in change. The average price of each item she bought was $" + averageItemPrice + ".";
+let receiptNoChange =  name + " paid $" + paymentAmount + " for " + itemQuantity + " items that cost $" + totalPrice + ". She received no change. The average price of each item she bought was $" + averageItemPrice + ".";
+if (totalPrice < paymentAmount) {
+  console.log(receiptWithChange);
+} else {
+ console.log(receiptNoChange);
+}
 
-console.log(d);
